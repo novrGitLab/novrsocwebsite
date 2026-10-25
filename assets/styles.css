@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 :root {
   --bg:#ffffff;
   --bg2:#f8f6fc;
@@ -6,6 +6,8 @@
   --line:#e6defa;
   --text:#1a1330;
   --muted:#5c5470;
+  /* TODO(RayneOps): official Cybernovr brand purple on print material is #662F8E —
+     reconcile against this on-screen purple before launch. Not changed here. */
   --primary:#7c3aed;
   --secondary:#a855f7;
   --font:'Manrope',Arial,sans-serif;
@@ -231,155 +233,6 @@ h4 {
 .hero-notes span:first-letter {
   color:var(--primary);
 }
-.console {
-  border:1px solid #3d5d60;
-  background:#0b1925;
-  box-shadow:0 30px 80px rgba(70,40,110,.18);
-  border-radius:11px;
-  overflow:hidden;
-  transform:perspective(1000px) rotateY(-5deg) rotateX(2deg);
-}
-.console-top {
-  height:41px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:1px solid #25404c;
-  padding:0 17px;
-  font-size:9px;
-  font-weight:800;
-  letter-spacing:.12em;
-  color:#b3c7cc;
-}
-.window-dots {
-  display:flex;
-  gap:5px;
-}
-.window-dots i {
-  height:7px;
-  width:7px;
-  border-radius:50%;
-  background:#49616b;
-}
-.window-dots i:first-child {
-  background:#d47873;
-}
-.window-dots i:nth-child(2) {
-  background:#d4b46c;
-}
-.window-dots i:nth-child(3) {
-  background:#ffffff;
-}
-.live-indicator {
-  color:var(--secondary);
-}
-.console-body {
-  display:flex;
-  min-height:390px;
-}
-.console-sidebar {
-  width:49px;
-  background:#08131c;
-  border-right:1px solid #203440;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:24px;
-  padding:16px 0;
-  color:#6d8992;
-  font-size:19px;
-}
-.console-mini-brand {
-  font-size:20px;
-  font-weight:800;
-  color:white;
-}
-.console-mini-brand span {
-  color:var(--secondary);
-}
-.side-active {
-  color:var(--secondary);
-}
-.console-content {
-  flex:1;
-  padding:22px;
-  min-width:0;
-}
-.console-head {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:8px;
-}
-.console-head small,.metrics small {
-  font-size:9px;
-  letter-spacing:.12em;
-  color:#819da7;
-}
-.console-head h3 {
-  font-size:20px;
-  margin-top:6px;
-  color:#fff;
-}
-.console-chip {
-  font-size:9px;
-  padding:6px 8px;
-  border:1px solid #35515a;
-  border-radius:5px;
-  color:#9ebac0;
-}
-.metrics {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  margin-top:22px;
-}
-.metrics>div {
-  border:1px solid #24414a;
-  border-radius:7px;
-  background:#102632;
-  padding:12px;
-}
-.metrics strong {
-  display:block;
-  font-size:17px;
-  color:var(--secondary);
-  margin:9px 0 4px;
-}
-.metrics span {
-  font-size:9px;
-  color:#a0b4bd;
-}
-.console-chart {
-  border:1px solid #24414a;
-  border-radius:7px;
-  padding:12px;
-  margin-top:12px;
-}
-.console-chart svg {
-  display:block;
-  width:100%;
-  height:145px;
-}
-.chart-title,.console-feed {
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  font-size:10px;
-  color:#afc6ca;
-}
-.console-feed {
-  margin-top:13px;
-  flex-wrap:wrap;
-}
-.status-dot {
-  display:inline-block;
-  background:var(--secondary);
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  margin-right:4px;
-}
 .section {
   padding:112px 0;
 }
@@ -413,6 +266,47 @@ h4 {
   flex-wrap:wrap;
   gap:10px;
   margin-top:28px;
+}
+.todo-box {
+  border:2px dashed #cbb8ea;
+  border-radius:8px;
+  padding:18px;
+  text-align:center;
+  background:rgba(124,58,237,.04);
+  color:var(--primary);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+.screenshot-slot {
+  position:relative;
+  border:2px dashed #cbb8ea;
+  border-radius:11px;
+  background:rgba(124,58,237,.04);
+  min-height:420px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.screenshot-slot img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.screenshot-slot .todo-note {
+  position:relative;
+  z-index:1;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:var(--primary);
+  background:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  box-shadow:0 4px 14px rgba(30,15,55,.08);
 }
 .contact-detail span {
   font-size:15px;
@@ -922,10 +816,6 @@ h4 {
   .hero {
     padding:75px 0;
   }
-  .console {
-    max-width:650px;
-    transform:none;
-  }
   .abstract-visual {
     min-height:380px;
   }
@@ -971,43 +861,8 @@ h4 {
   .pillar-card h3 {
     margin-top:32px;
   }
-  .console-body {
-    min-height:280px;
-  }
-  .console-content {
-    padding:11px;
-  }
-  .console-sidebar {
-    width:32px;
-    font-size:13px;
-    gap:18px;
-  }
-  .metrics {
-    gap:5px;
-  }
-  .metrics>div {
-    padding:7px;
-  }
-  .metrics strong {
-    font-size:12px;
-  }
-  .metrics small {
-    font-size:7px;
-  }
-  .metrics span {
-    font-size:7px;
-  }
-  .console-head h3 {
-    font-size:14px;
-  }
-  .console-chip {
-    display:none;
-  }
-  .console-chart svg {
-    height:110px;
-  }
-  .console-feed {
-    font-size:8px;
+  .screenshot-slot {
+    min-height:260px;
   }
   .cta-layout {
     align-items:flex-start;

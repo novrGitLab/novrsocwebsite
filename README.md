@@ -26,7 +26,7 @@ Upload all files, keeping the folder structure, to any static host (Netlify, Ver
 - Verify all product claims and the Cybernovr brand wording with company leadership.
 - Confirm `soc@cybernovr.com` and the NovrSOC login URL.
 - Contact form uses `mailto:` (opens the visitor's email client), not a real form submission API.
-- Illustrative console is explicitly labelled as conceptual, not live production data.
+- The homepage hero has a real-screenshot slot (`assets/screens/dashboard.png`, not yet supplied) rather than an illustrative mock-up — see the `TODO(RayneOps)` in `index.html`.
 - Add approved company logo, privacy policy, legal details, analytics, and any approved imagery.
 - No customer logos, certifications, performance metrics, pricing or testimonials have been invented.
 
