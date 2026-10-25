@@ -103,6 +103,56 @@ h4 {
 .nav-link:hover,.nav-link.active,.login-link:hover {
   color:var(--primary);
 }
+.nav-dropdown {
+  position:relative;
+}
+.nav-dropdown-toggle {
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  background:none;
+  border:0;
+  padding:0;
+  font:inherit;
+  cursor:pointer;
+}
+.nav-dropdown-toggle svg {
+  transition:transform .2s;
+}
+.nav-dropdown.open .nav-dropdown-toggle svg {
+  transform:rotate(180deg);
+}
+.nav-dropdown-menu {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:-14px;
+  margin-top:17px;
+  min-width:240px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  box-shadow:0 20px 40px rgba(30,15,55,.12);
+  padding:8px;
+  flex-direction:column;
+  gap:2px;
+  z-index:30;
+}
+.nav-dropdown.open .nav-dropdown-menu {
+  display:flex;
+}
+.nav-dropdown-menu a {
+  padding:10px 12px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--text);
+  white-space:nowrap;
+}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a:focus-visible {
+  background:var(--panel);
+  color:var(--primary);
+}
 .nav-actions {
   display:flex;
   align-items:center;
@@ -688,8 +738,8 @@ h4 {
 }
 .footer-main {
   display:grid;
-  grid-template-columns:2.1fr 1fr 1fr 1.2fr;
-  gap:40px;
+  grid-template-columns:1.5fr 1fr 1.1fr 1fr 1fr;
+  gap:30px;
 }
 .footer-main>div {
   display:flex;
@@ -778,6 +828,17 @@ h4 {
   .nav-link {
     padding:13px 0;
     font-size:13px;
+  }
+  .nav-dropdown-toggle {
+    width:100%;
+    justify-content:space-between;
+  }
+  .nav-dropdown-menu {
+    position:static;
+    margin:0 0 8px;
+    box-shadow:none;
+    border:0;
+    background:var(--panel);
   }
   .hero-grid,.challenge-grid,.workflow,.split,.contact-grid {
     grid-template-columns:1fr;
