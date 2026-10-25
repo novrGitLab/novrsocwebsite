@@ -16,6 +16,9 @@ A separate multipage Cybernovr marketing site with four primary product pillars:
 ## Preview
 Extract the ZIP and open `index.html` in a browser. All pages link relatively and work without a build system. CSS and JS live in `assets/`. Google Fonts load when online; system fonts are fallback.
 
+## Shared header/footer
+`partials/header.html` and `partials/footer.html` are the source of truth for the nav and footer. Each page wraps its own copy in `<!-- PARTIAL:header -->...<!-- /PARTIAL:header -->` / `<!-- PARTIAL:footer -->...<!-- /PARTIAL:footer -->` markers; after editing a partial, run `node scripts/sync-partials.mjs` to propagate it to every page (plain static output, not a build step — nothing to install, nothing runs at deploy time).
+
 ## Deploy
 Upload all files, keeping the folder structure, to any static host (Netlify, Vercel static deployment, Cloudflare Pages, or a regular web server). No backend required.
 
