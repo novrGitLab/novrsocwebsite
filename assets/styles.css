@@ -244,7 +244,7 @@ h4 {
 }
 .stats-grid {
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:14px;
   text-align:center;
 }
@@ -266,27 +266,6 @@ h4 {
   flex-wrap:wrap;
   gap:10px;
   margin-top:28px;
-}
-.todo-box {
-  display:none;
-  border:2px dashed #cbb8ea;
-  border-radius:8px;
-  padding:18px;
-  text-align:center;
-  background:rgba(124,58,237,.04);
-  color:var(--primary);
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.04em;
-}
-.stat:has(.todo-box) {
-  display:none;
-}
-html.todo-review .todo-box {
-  display:block;
-}
-html.todo-review .stat:has(.todo-box) {
-  display:block;
 }
 .hero-screenshot {
   border-radius:11px;
@@ -843,8 +822,8 @@ html.todo-review .stat:has(.todo-box) {
     grid-template-columns:1fr;
   }
   .stats-grid {
-    grid-template-columns:repeat(2,1fr);
-    gap:24px;
+    grid-template-columns:1fr;
+    gap:20px;
   }
   .pillar-card {
     min-height:245px;
