@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO(RayneOps): URLs below use novrsocwebsite.vercel.app (the deployment this brief named as current).
+     Update the hostname here once the site moves to its own domain. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://novrsocwebsite.vercel.app/</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/platform</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/vms</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/secops</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/ti</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/cnii</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/grc</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/cert-csirt</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/regulators</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/solutions</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/integrations</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/trust</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/about</loc></url>
+  <url><loc>https://novrsocwebsite.vercel.app/contact</loc></url>
+</urlset>
