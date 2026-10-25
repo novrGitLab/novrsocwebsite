@@ -184,7 +184,7 @@ h4 {
   color:#fff;
 }
 .btn-primary:hover {
-  background:var(--secondary);
+  background:#6d28d9;
   color:#fff;
 }
 .btn-outline,.btn-ghost {
@@ -868,10 +868,11 @@ h4 {
   border-radius:4px;
   padding:14px;
   color:var(--text);
-  outline:none;
 }
 .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus {
   border-color:var(--primary);
+  outline:2px solid var(--primary);
+  outline-offset:1px;
 }
 .contact-form button {
   margin-top:15px;
@@ -919,7 +920,7 @@ h4 {
   border-top:1px solid var(--line);
   margin-top:65px;
   padding-top:24px;
-  color:#766f88;
+  color:var(--muted);
   font-size:11px;
 }
 @media(max-width:1180px) {
