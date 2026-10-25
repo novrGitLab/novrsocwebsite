@@ -268,6 +268,7 @@ h4 {
   margin-top:28px;
 }
 .todo-box {
+  display:none;
   border:2px dashed #cbb8ea;
   border-radius:8px;
   padding:18px;
@@ -278,35 +279,25 @@ h4 {
   font-weight:800;
   letter-spacing:.04em;
 }
-.screenshot-slot {
-  position:relative;
-  border:2px dashed #cbb8ea;
+.stat:has(.todo-box) {
+  display:none;
+}
+html.todo-review .todo-box {
+  display:block;
+}
+html.todo-review .stat:has(.todo-box) {
+  display:block;
+}
+.hero-screenshot {
   border-radius:11px;
-  background:rgba(124,58,237,.04);
-  min-height:420px;
   overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  border:1px solid var(--line);
+  box-shadow:0 30px 80px rgba(70,40,110,.18);
 }
-.screenshot-slot img {
-  position:absolute;
-  inset:0;
+.hero-screenshot img {
+  display:block;
   width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.screenshot-slot .todo-note {
-  position:relative;
-  z-index:1;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.04em;
-  color:var(--primary);
-  background:#fff;
-  padding:10px 16px;
-  border-radius:8px;
-  box-shadow:0 4px 14px rgba(30,15,55,.08);
+  height:auto;
 }
 .contact-detail span {
   font-size:15px;
@@ -860,9 +851,6 @@ h4 {
   }
   .pillar-card h3 {
     margin-top:32px;
-  }
-  .screenshot-slot {
-    min-height:260px;
   }
   .cta-layout {
     align-items:flex-start;
